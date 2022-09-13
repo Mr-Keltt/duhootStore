@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon" />
+    <link href="fonts/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="logInLog">
+
+      <form class="logInLog__form">
+        <p class="logInLog__text">Log In <a href="index.html" class="goToHome"><i class="fas fa-home"></i></a></p>
+        <label class="logInLog__label" for="login">Your login</label><input id="login" type="text" class="logInLog__input" placeholder="Your login">
+        
+        <p class="infoTextLogin infoText notValidText"></p>
+        
+        <label class="logInLog__label" for="password">Your password</label><input id="password" type="password" class="logInLog__input" placeholder="Your password">
+        <p class="infoTextPassword infoText notValidText"></p>
+        
+        <a class="logInLog__button">Log In</a>
+        <a href="signUp.html" class="logInLog__signUp">Sign Up</a>
+      </form>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="fonts/all.min.js"></script>
+    <script src="js/logIn.js"></script>
+  </body>
+</html>

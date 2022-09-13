@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DuhootStore</title>
+	<link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+	<link href="fonts/fontawesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="background">
+		<div class="background__loading"></div>
+		<div class="background__header"></div>
+		<div class="background__rectangle"></div>
+		<div class="background__footer"></div>
+	</div>
+
+	<div class="popUp windowLogInPlease">
+		<div class="popUp__content">
+			<div class="popUp__close windowLogInPlease__close"></div>
+			<p class="popUp__text">Login please</p>
+			<div class="popUp__buttonContainer">
+				<div class="popUp__button button windowLogInPlease__button">LOGIN</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popUp windowAreYouSure">
+		<div class="popUp__content">
+			<div class="popUp__close windowAreYouSure__close"></div>
+			<p class="popUp__text">Are you sure?</p>
+			<div class="popUp__buttonContainer">
+				<div class="popUp__button button windowAreYouSure__buttonY">YES</div>
+				<div class="popUp__button button windowAreYouSure__buttonC">CANSCEL</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<nav class="row">
+			<img src="img/logo1.png" class="row__logo"></img>
+
+			<ul class="row__menu">
+				<li class="row__menuItem"><a>Reality</a></li>
+				<li class="row__menuItem"><a>Living</a></li>
+				<li class="row__menuItem"><a>EduCation</a></li>
+				<li class="row__menuItem"><a>Entertainment</a></li>
+				<li class="row__menuItem"><a>Mobility</a></li>
+			</ul>
+
+			<div class="row__search search">
+				<button class="search__button"><i class="fas fa-search"></i></button>
+				<input type="text" class="search__input">
+			</div>
+
+			<a href="logIn.html" class="row__logIn logIn">
+				<div class="logIn__background"></div>
+				<div class="logIn__user"><i class="fas fa-user"></i></div>
+				<div class="logIn__text">LOGIN</div>
+			</a>
+
+			<ul class="user">
+				<li class="user__personalArea">Person alarea</li>
+				<li class="user__logOut">Log out</li>
+			</ul>
+		</nav>
+
+		<header class="header">
+			<div class="header__content">
+				<h2 class="header__ass">What are you looking for?</h2>
+
+				<form class="header__form">
+					<div class="header__dropDownMenies">
+						<ul class="header__cities cities">
+							<li class="citys__item">Dubai</li>
+							<li class="citys__item">Moscow</li>
+							<li class="citys__item">New York</li>
+						</ul>
+
+						<ul class="header__education education">
+							<li class="education__item">Elementary</li>
+							<li class="education__item">Secondary</li>
+							<li class="education__item">Higher</li>
+						</ul>
+					</div>
+
+					<div class="header__inputContainer">
+						<input type="text" class="header__input input">
+						<div class="header__inputPlaceholder inputPlaceholder">Keyword, name, date, ...</div>
+					</div>
+					<div class="header__button button">SEARCH</div>
+				</form>
+			</div>
+		</header>
+
+		<div class="rectangleWraper">
+			<div class="rectangle">
+				<ul class="rectangle__menu">
+					<li class="rectangle__menuItem" data-product-recommended><a>Recommended</a></li>
+					<li class="rectangle__menuItem" data-product-latest><a>Latest</a></li>
+					<li class="rectangle__menuItem active" data-product-highlights><a>Highlights</a></li>
+				</ul>
+
+				<div class="rectangle__centerItems">
+					<ul class="rectangle__cities cities">
+						<li class="rectangle__citiesItem" data-product-dubai>Dubai</li>
+						<li class="rectangle__citiesItem" data-product-moscow>Moscow</li>
+						<li class="rectangle__citiesItem" data-product-new-york>New York</li>
+					</ul>
+
+					<div class="rectangle__mapButton">Show map <i class="fas fa-map-marker-alt"></i></div>
+				</div>
+
+			
+				<div class="rectangle__filterContainer">
+					<p class="rectangle__filterText">FILTER:</p>
+				
+					<ul class="rectangle__filterUl">
+						<li class="rectangle__filterItem active" data-product-type="home"><img src="img/productLogoImg1.png" style="width: 25px;"></li>
+						<li class="rectangle__filterItem active" data-product-type="people"><img src="img/productLogoImg2.png"></li>
+						<li class="rectangle__filterItem active" data-product-type="student"><img src="img/productLogoImg3.png"></li>
+						<li class="rectangle__filterItem active" data-product-type="miusic"><img src="img/productLogoImg4.png" style="width: 20px;"></li>
+						<li class="rectangle__filterItem active" data-product-type="transport"><img src="img/productLogoImg5.png" style="width: 20px;"></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13170.391162686688!2d37.52606697600727!3d55.74694108936861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdd017303b9%3A0xd1f63f945a2450c2!2z0JzQvtGB0LrQstCwINCh0LjRgtC4!5e0!3m2!1sru!2sru!4v1592820291853!5m2!1sru!2sru" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	
+		<div class="products">
+			<div id="productId-0" class="products__item product" data-product-type="home" data-product-highlights data-product-recommended data-product-all-cities data-product-moscow data-product-dubai>
+
+				<img src="img/productImg1.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div id="lol" class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">2 bedroom house for rent in Dubai</h2>
+				<p class="product__type">Vision Agency</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(365)</p>
+				</div>
+			</div>
+
+			<div id="productId-1" class="products__item product" data-product-type="miusic" data-product-highlights data-product-latest data-product-all-cities data-product-moscow data-product-new-york>
+
+				<img src="img/productImg2.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">Beach party festival 2014</h2>
+				<p class="product__type">Long beach</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(1165)</p>
+				</div>
+			</div>
+
+			<div id="productId-2" class="products__item product" data-product-type="transport" data-product-highlights data-product-recommended data-product-latest data-product-all-cities data-product-new-york>
+				
+				<img src="img/productImg1.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>				
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">Aliquam quis pulvinar purus</h2>
+				<p class="product__type">Bus trans</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(365)</p>
+				</div>
+			</div>
+
+			<div id="productId-3" class="products__item product" data-product-type="home" data-product-highlights data-product-all-cities data-product-dubai>
+				
+				<img src="img/productImg3.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">4 bedroom house for rent in Dubai</h2>
+				<p class="product__type">reality Agency</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(165)</p>
+				</div>
+			</div>
+
+			<div id="productId-4" class="products__item product review" data-product-type="people" data-product-highlights data-product-all-cities data-product-moscow>
+				<img src="img/productImg4.jpg" class="product__img">
+				<div class="product__logo"></div>
+
+				<div class="product__row">
+					<p class="product__type">Vision agency</p>
+
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">
+						(365)
+					</p>
+				</div>
+
+				<div class="review__content">
+					<div class="review__logoUser"><div class="review__line"></div><img src="img/logoUser1.png" class="review__logoUserImg"></div>
+					
+					<div class="review__textContainer">
+						<div class="review__assessment">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+
+						<h2 class="review__userName">Lucy-P</h2>
+						<p class="review__text">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.”</p>
+						<div class="review__button">...read more</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="productId-5" class="products__item product review" data-product-type="miusic" data-product-highlights data-product-latest data-product-all-cities data-product-moscow>
+				<img src="img/productImg5.jpg" class="product__img">
+				<div class="product__logo"></div>
+
+				<div class="product__row">
+					<p class="product__type">Skybox club</p>
+
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">
+						(1365)
+					</p>
+				</div>
+
+				<div class="review__content">
+					<div class="review__logoUser"><div class="review__line"></div><img src="img/logoUser2.png" class="review__logoUserImg"></div>
+					
+					<div class="review__textContainer">
+						<div class="review__assessment">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+
+						<h2 class="review__userName">Peter145</h2>
+						<p class="review__text">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.”</p>
+						<div class="review__button">...read more</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="productId-6" class="products__item product" data-product-type="student" data-product-highlights data-product-recommended data-product-all-cities data-product-new-york>
+				
+				<img src="img/productImg3.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">4 bedroom house for rent in Dubai</h2>
+				<p class="product__type">reality Agency</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(165)</p>
+				</div>
+			</div>
+
+			<div id="productId-7" class="products__item product" data-product-type="people" data-product-highlights data-product-recommended data-product-latest data-product-all-cities data-product-moscow>
+
+				<img src="img/productImg2.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">Beach party festival 2014</h2>
+				<p class="product__type">Long beach</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(1165)</p>
+				</div>
+			</div>
+
+			<div id="productId-8" class="products__item product" data-product-type="home" data-product-highlights data-product-all-cities data-product-moscow>
+				
+				<img src="img/productImg3.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">4 bedroom house for rent in Dubai</h2>
+				<p class="product__type">reality Agency</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(165)</p>
+				</div>
+			</div>
+
+			<div id="productId-9" class="products__item product" data-product-type="miusic" data-product-highlights data-product-all-cities data-product-new-york data-product-dubai>
+
+				<img src="img/productImg1.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">2 bedroom house for rent in Dubai</h2>
+				<p class="product__type">Vision Agency</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(365)</p>
+				</div>
+			</div>
+
+			<div id="productId-10" class="products__item product review" data-product-type="transport" data-product-highlights data-product-recommended data-product-latest data-product-all-cities data-product-dubai>
+				<img src="img/productImg5.jpg" class="product__img">
+				<div class="product__logo"></div>
+
+				<div class="product__row">
+					<p class="product__type">Skybox club</p>
+
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">
+						(1365)
+					</p>
+				</div>
+
+				<div class="review__content">
+					<div class="review__logoUser"><div class="review__line"></div><img src="img/logoUser2.png" class="review__logoUserImg"></div>
+					
+					<div class="review__textContainer">
+						<div class="review__assessment">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+
+						<h2 class="review__userName">Peter145</h2>
+						<p class="review__text">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.”</p>
+						<div class="review__button">...read more</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="productId-11" class="products__item product" data-product-type="people" data-product-highlights data-product-recommended data-product-all-cities data-product-new-york>
+
+				<img src="img/productImg2.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">Beach party festival 2014</h2>
+				<p class="product__type">Long beach</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(1165)</p>
+				</div>
+			</div>
+
+			<div id="productId-12" class="products__item product" data-product-type="student" data-product-highlights data-product-latest data-product-all-cities data-product-dubai>
+				
+				<img src="img/productImg3.jpg" class="product__img">
+				<p class="product__prise">$2,990</p>
+
+				<div class="product__hover productHover">
+					<div class="productHover__button"><i class="fas fa-search"></i>Show more</div>
+					
+					<div class="productHover__row">
+						<div class="productHover__estimate" data-select="false">
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					
+						<div class="productHover__comment"><i class="far fa-comments"></i></div>
+					</div>
+				</div>
+
+				<div class="product__logo"></div>
+				<h2 class="product__title">4 bedroom house for rent in Dubai</h2>
+				<p class="product__type">reality Agency</p>
+				
+				<div class="product__assessment">
+					<div class="product__stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+
+					<p class="product__ratedPeople">(165)</p>
+				</div>
+			</div>
+		</div>
+
+		<p class="products__mesageForAllProducrsOn">Choose the category that interests you.</p>
+		<div class="products__hideButtonContainer">
+			<a class="products__hideButton">Load more <i class="fas fa-long-arrow-alt-right"></i></a>
+		</div>
+
+		<div class="line"></div>
+
+		<div class="services">
+			<h2 class="services__title">What can DuHoot offer to you?</h2>
+			<p class="services__subtitle">Etiam cursus ipsum quis enim faucibus</p>
+
+			<div class="services__menu servicesMenu">
+				<div data-el="1" class="servicesMenu__inem active" data-id="1"><img src="img/productImg1-service.png"></div>
+				<div data-el="2" class="servicesMenu__line"></div>
+				<div data-el="3" class="servicesMenu__inem" data-id="2"><img src="img/productImg2-service.png"></div>
+				<div data-el="4" class="servicesMenu__line"></div>
+				<div data-el="5" class="servicesMenu__inem" data-id="3"><img src="img/productImg3-service.png"></div>
+				<div data-el="6" class="servicesMenu__line"></div>
+				<div data-el="7" class="servicesMenu__inem" data-id="4"><img src="img/productImg4-service.png"></div>
+				<div data-el="8" class="servicesMenu__line"></div>
+				<div data-el="9" class="servicesMenu__inem" data-id="5"><img src="img/productImg5-service.png"></div>
+			</div>
+
+			<h3 class="services__titleReality">Reality</h3>
+
+			<div class="services__realityContant realityContant">
+				<div class="realityContant__slideContainer">
+					<div class="realityContant__slide" data-slide="1">
+						<div class="realityContant__item">
+							<div class="realityContant__itemImg"><i class="fas fa-bolt"></i></div>
+							<div class="realityContant__itemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam impedit asperiores vitae dignissimos odit optio blanditiis tempore dolores corrupti excepturi, dolorum deserunt minima animi magnam, sequi voluptate! Ipsum fugit consectetur nobis maxime cum quaerat ex voluptatem obcaecati,</div>
+						</div>
+
+						<div class="realityContant__item">
+							<div class="realityContant__itemImg"><i class="fas fa-leaf"></i></div>
+							<div class="realityContant__itemText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum porro veniam mollitia a ut in obcaecati, nemo sit rem necessitatibus placeat ex repellat, doloribus officiis, animi exercitationem nihil expedita aperiam consequatur id quod numquam vel.</div>
+						</div>
+					</div>
+
+					<div class="realityContant__slide" data-slide="2">
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-bolt"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam impedit asperiores vitae dignissimos odit optio blanditiis tempore dolores corrupti excepturi, dolorum deserunt minima animi magnam, sequi voluptate! Ipsum fugit consectetur nobis maxime cum quaerat ex voluptatem obcaecati,</div>
+					</div>
+				
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-leaf"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum porro veniam mollitia a ut in obcaecati, nemo sit rem necessitatibus placeat ex repellat, doloribus officiis, animi exercitationem nihil expedita aperiam consequatur id quod numquam vel.</div>
+					</div>
+					</div>
+
+					<div class="realityContant__slide" data-slide="3">
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-bolt"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam impedit asperiores vitae dignissimos odit optio blanditiis tempore dolores corrupti excepturi, dolorum deserunt minima animi magnam, sequi voluptate! Ipsum fugit consectetur nobis maxime cum quaerat ex voluptatem obcaecati,</div>
+					</div>
+				
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-leaf"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum porro veniam mollitia a ut in obcaecati, nemo sit rem necessitatibus placeat ex repellat, doloribus officiis, animi exercitationem nihil expedita aperiam consequatur id quod numquam vel.</div>
+					</div>
+					</div>
+
+					<div class="realityContant__slide" data-slide="4">
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-bolt"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam impedit asperiores vitae dignissimos odit optio blanditiis tempore dolores corrupti excepturi, dolorum deserunt minima animi magnam, sequi voluptate! Ipsum fugit consectetur nobis maxime cum quaerat ex voluptatem obcaecati,</div>
+					</div>
+				
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-leaf"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum porro veniam mollitia a ut in obcaecati, nemo sit rem necessitatibus placeat ex repellat, doloribus officiis, animi exercitationem nihil expedita aperiam consequatur id quod numquam vel.</div>
+					</div>
+					</div>
+
+					<div class="realityContant__slide" data-slide="5">
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-bolt"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In veniam impedit asperiores vitae dignissimos odit optio blanditiis tempore dolores corrupti excepturi, dolorum deserunt minima animi magnam, sequi voluptate! Ipsum fugit consectetur nobis maxime cum quaerat ex voluptatem obcaecati,</div>
+					</div>
+				
+					<div class="realityContant__item">
+						<div class="realityContant__itemImg"><i class="fas fa-leaf"></i></div>
+						<div class="realityContant__itemText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum porro veniam mollitia a ut in obcaecati, nemo sit rem necessitatibus placeat ex repellat, doloribus officiis, animi exercitationem nihil expedita aperiam consequatur id quod numquam vel.</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<h2 class="footer__title">Subscribe to our newsletter</h2>
+
+			<form class="footer__subscribe">
+				<div class="footer__inputContainer">
+					<input type="text" class="footer__input input">
+					<p class="footer__inputPlaceholder inputPlaceholder"><i class="far fa-envelope"></i>your@email.com</p>
+				</div>
+
+				<div class="footer__button button">Subscribe</div>
+			</form>
+
+
+			<div class="line"></div>
+
+			<div class="footer__contant">
+				<div class="footer__dropDownMenuContain">
+					<ul class="footer__menu">
+						<li class="footer__menuItem">Aliquam quis</li>
+						<li class="footer__menuItem">Pulvinar purus</li>
+						<li class="footer__menuItem">Etiam cursus</li>
+						<li class="footer__menuItem">Ipsum quis</li>
+						<li class="footer__menuItem">Enim faucibus</li>
+					</ul>
+
+					<ul class="footer__menu">
+						<li class="footer__menuItem">Aliquam quis</li>
+						<li class="footer__menuItem">Pulvinar purus</li>
+						<li class="footer__menuItem">Etiam cursus</li>
+						<li class="footer__menuItem">Ipsum quis</li>
+						<li class="footer__menuItem">Enim faucibus</li>
+					</ul>
+				</div>
+
+				<div class="footer__menuContainer">
+					<h3 class="footer__menuTitle">Ipsum quis</h3>
+					<ul class="footer__menu">
+						<li class="footer__menuItem">Aliquam quis</li>
+						<li class="footer__menuItem">Pulvinar purus</li>
+						<li class="footer__menuItem">Etiam cursus</li>
+						<li class="footer__menuItem">Ipsum quis</li>
+						<li class="footer__menuItem">Enim faucibus</li>
+					</ul>
+				</div>
+
+				<div class="footer__menuContainer">
+					<h3 class="footer__menuTitle">Ipsum quis</h3>
+					<ul class="footer__menu">
+						<li class="footer__menuItem">Aliquam quis</li>
+						<li class="footer__menuItem">Pulvinar purus</li>
+						<li class="footer__menuItem">Etiam cursus</li>
+						<li class="footer__menuItem">Ipsum quis</li>
+						<li class="footer__menuItem">Enim faucibus</li>
+					</ul>
+				</div>
+
+				<div class="footer__followAndCopyright">
+					<h3 class="footer__followAndCopyrightTitle">Follow us</h3>
+
+					<ul class="footer__followAndCopyrightItems">
+						<li class="footer__followAndCopyrightItem"><i class="fab fa-facebook-f"></i></li>
+						<li class="footer__followAndCopyrightItem"><i class="fab fa-twitter"></i></li>
+						<li class="footer__followAndCopyrightItem"><i class="fab fa-google-plus-g"></i></li>
+						<li class="footer__followAndCopyrightItem"><i class="fab fa-youtube"></i></li>
+					</ul>
+
+					<p class="footer__copyright">Copyright © All Rights reserved</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="fonts/all.min.js"></script>
+	<script src="js/burgerMenuControl.js"></script>
+	<script src="js/scrollWidth.js"></script>
+	<script src="js/backgroundThatGoesBeyond.js"></script>
+	<script src="js/dropDownElementControl.js"></script>
+	<script src="js/raitingStars.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

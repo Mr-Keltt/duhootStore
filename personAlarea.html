@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person alarea</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon" />
+    <link href="fonts/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="personAlareaContainer">
+      <div class="contant">
+        <div class="logo">
+          <img src="" class="logo__img" />
+          <div class="logo__loginButton">Сhange</div>
+        </div>
+
+        <div class="personalInfo">
+          <p class="personalInfo__text">Your login:</p>
+          <p class="personalInfo__login"></p>
+          <div class="personalInfo__loginButton">Сhange</div>
+          <p class="personalInfo__text">Your password:</p>
+          <p class="personalInfo__password"></p>
+          <div class="personalInfo__passwordButton">Сhange</div>
+        </div>
+
+        <p class="removeAc">Delete account</p>
+
+        <div class="loginСhang">
+          <div class="loginСhang__content">
+            <label for="loginСhangLoginInput" class="loginСhang__text">New login</label
+            >
+            <label for="loginСhangPasswordInput" class="loginСhang__text"
+              >Password</label
+            >
+            <input
+              type="text"
+              id="loginСhangLoginInput"
+              class="loginСhang__loginInput"
+              placeholder="New login"
+            />
+            <input
+              type="password"
+              id="loginСhangPasswordInput"
+              class="loginСhang__passwordInput"
+              placeholder="Password"
+            />
+            <p class="loginСhang__loginInputInfo notValidText"></p>
+            <p class="loginСhang__passwordInputInfo notValidText"></p>
+            <div class="loginСhang__buttonY button">APPLAY</div>
+            <div class="loginСhang__buttonC button">CANSCEL</div>
+          </div>
+        </div>
+
+        <div class="passwordChang">
+          <div class="passwordChang__content">
+            <label
+              for="passwordChangNewPasswordInput"
+              class="passwordChang__text"
+              >New password</label
+            >
+            <label
+              for="passwordChangOldPasswordInput"
+              class="passwordChang__text"
+              >Old password</label
+            >
+            <input
+              type="password"
+              id="passwordChangNewPasswordInput"
+              class="passwordChang__newPasswordInput"
+              placeholder="New password"
+            />
+            <input
+              type="password"
+              id="passwordChangOldPasswordInput"
+              class="passwordChang__oldPasswordInput"
+              placeholder="Old password"
+            />
+            <p class="passwordChang__newPasswordInputInfo notValidText"></p>
+            <p class="passwordChang__oldPasswordInputInfo notValidText"></p>
+            <label
+              for="passwordChangRepeatNewPasswordInput"
+              class="passwordChang__text"
+              >Repeat new password</label
+            >
+            <div class="void"></div>
+            <input
+              type="password"
+              id="passwordChangRepeatNewPasswordInput"
+              class="passwordChang__repeatNewPasswordInput"
+              placeholder="Repeat new password"
+            />
+            <div class="void"></div>
+            <p
+              class="passwordChang__repeatNewPasswordInputInfo notValidText"
+            ></p>
+            <div class="void"></div>
+            <div class="passwordChang__buttonY button">APPLAY</div>
+            <div class="passwordChang__buttonC button">CANSCEL</div>
+          </div>
+        </div>
+
+        <div class="logoChang">
+          <div class="logoChang__content">
+            <p class="logoChang__text">
+              Drag to the window below or find your logo on the computer.
+            </p>
+            <label for="logoChangLogo" class="logoChang__logo">
+				<i class="far fa-file"></i>
+            	<input type="file" onchange="readFile(this)" id="logoChangLogo" class="logoChang__logoInput"/>
+				<img src="" class="logoChang__logoImg">
+			</label>
+			<p class="logoChang__logoInputInfo notValidText"></p>
+            <div class="logoChang__buttonY button">APPLAY</div>
+            <div class="logoChang__buttonC button">CANSCEL</div>
+          </div>
+        </div>
+
+        <div class="deleteAccount">
+          <div class="deleteAccount__content">
+            <label for="deleteAccountpasswordInput" class="deleteAccount__text"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="deleteAccountpasswordInput"
+              class="deleteAccount__passwordInput"
+              placeholder="Password"
+            />
+            <p class="deleteAccount__passwordInputInfo notValidText"></p>
+            <div class="deleteAccount__buttonY button">DELETE</div>
+            <div class="deleteAccount__buttonC button">CANSCEL</div>
+          </div>
+        </div>
+
+        <a href="index.html" class="goToHome"><i class="fas fa-home"></i></a>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="fonts/all.min.js"></script>
+    <script src="js/personAlarea.js"></script>
+  </body>
+</html>

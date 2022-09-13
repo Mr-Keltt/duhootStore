@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product</title>
+	<link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+	<link href="fonts/fontawesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="popUp estimate">
+		<div class="popUp__content">
+			<div class="popUp__close estimate__close"></div>
+			<p class="popUp__text">Your rating for this item:</p>
+			<div class="products__item">
+				<div class="estimate__starsContainer">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+				</div>
+			</div>
+			<div class="popUp__buttonContainer">
+				<div class="popUp__button button estimate__buttonC">CANSCEL</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popUp windowLogInPlease">
+		<div class="popUp__content">
+			<div class="popUp__close windowLogInPlease__close"></div>
+			<p class="popUp__text">Login please</p>
+			<div class="popUp__buttonContainer">
+				<div class="popUp__button button windowLogInPlease__button">LOGIN</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="productContainer">
+		<div class="productContainer__top">
+			<div class="productContainer__imgContainer">
+				<img src="" class="productContainer__img">
+				<p class="productContainer__prise"></p>
+			</div>
+
+			<div class="productContainer__textContainer">
+				<h1 class="productContainer__title"></h1>
+				<p class="productContainer__type"></p>
+				<div class="productContainer__assessmentContainer">
+					<div class="productContainer__assessmentStars">
+						<i class="fa-star"></i>
+						<i class="fa-star"></i>
+						<i class="fa-star"></i>
+						<i class="fa-star"></i>
+						<i class="fa-star"></i>
+					</div>
+
+					<p class="productContainer__assessmentText"></p>
+				</div>
+				<p class="productContainer__estimate">Estimate</p>
+			</div>
+		</div>
+
+		<div class="productContainer__content">
+
+		</div>
+
+		<div class="productContainer__comment">
+			<div class="logInPleaseButton button">LOGIN PLEASE</div>
+
+			<div class="productContainer__leaveAComment leaveAComment">
+				<img class="userLogo">
+				<textarea class="leaveAComment__comment"></textarea>
+				<div class="void"></div>
+				<div class="leaveAComment__button button">LEAVE A COMMENT</div>
+			</div>
+
+			<a id="comment"></a>
+			<div class="productContainer__commentContainer commentContainer">
+				
+				<p class="commentContainer__notComment">This product has no comments yet.</p>
+			</div>
+		</div>
+
+		<a href="index.html" class="goToHome"><i class="fas fa-home"></i></a>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="fonts/all.min.js"></script>
+	<script src="js/raitingStars.js"></script>
+	<script src="js/product.js"></script>
+</body>
+</html>
